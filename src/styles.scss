@@ -1,1 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+@import './app/shared/style/variables';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.bold-text {
+  font-weight: 700;
+}
+
+.semiBold-text {
+  font-weight: 600;
+}
+
+.regular-text {
+  font-weight: 400;
+}
+
+.title {
+  font-size: 20px;
+}
+
+.hight_text {
+  font-size: 16px;
+}
+
+.medium-text {
+  font-size: 14px;
+}
+
+.small-text {
+  font-size: 12px;
+}
+
+.card-borderd {
+  border: 1px solid $dark-gray;
+}
