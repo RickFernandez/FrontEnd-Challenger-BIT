@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProfileCardComponent } from './profile-card/profile-card.component';
 import { PersonalInfoCardComponent } from './personal-info-card/personal-info-card.component';
@@ -22,6 +22,7 @@ import { SugestionCardComponent } from './sugestion-card/sugestion-card.componen
     PersonalInfoCardComponent,
     ContactInfoCardComponent,
     SugestionCardComponent
-  ]
+  ],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class CardsModule { }
