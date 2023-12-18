@@ -16,6 +16,12 @@ import { SugestionCardComponent } from './sugestion-card/sugestion-card.componen
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    ProfileCardComponent,
+    PersonalInfoCardComponent,
+    ContactInfoCardComponent,
+    SugestionCardComponent
   ]
 })
 export class CardsModule { }
