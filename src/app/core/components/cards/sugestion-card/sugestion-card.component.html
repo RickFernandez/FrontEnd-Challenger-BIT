@@ -1,1 +1,19 @@
-<p>sugestion-card works!</p>
+<div class="card borderd">
+  <img class="card-img" src="{{ user.picture.large }}">
+  <p class="name semiBold-text hight-text">
+    {{ user.name.first + ' ' + user.name.last }}
+  </p>
+  <div class="location">
+    <p class="country regular-text medium-text">
+      {{ user.location.country }}
+    </p>
+    <p class="city regular-text medium-text">
+      {{ user.location.city }}
+    </p>
+  </div>
+  <button 
+    class="btn medium-text regular-text"
+    [ngClass]="{ 'disabled': user.name.first === 'Henrique', 'following': user.following }"
+    (click)="!user.following ? onFollow(user) : onUnfollow(user)"
+  >Seguir</button>
+</div>
