@@ -1,10 +1,22 @@
 <section>
   <div class="bg"></div>
   <div class="content">
-    <h1 class="bold-text">Encontre pessoas como você!</h1>
-    <bit-profile-card></bit-profile-card>
+    <h1 class="bold-text title">Find new users like you</h1>
+    <div class="container">
+      <bit-profile-card></bit-profile-card>
+    </div>
     <div class="row">
       <bit-personal-info-card></bit-personal-info-card>
+      <bit-contact-info-card></bit-contact-info-card>
+    </div>
+    <div class="suggestions">
+      <h3 class="bold-text">Suggestion 4you</h3>
+      <div class="row" >
+        <bit-sugestion-card
+          *ngFor="let user of suggestedUsers"
+          [user]="user"
+        ></bit-sugestion-card>
+      </div>
     </div>
   </div>
 </section>
