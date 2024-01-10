@@ -1,4 +1,31 @@
 <div class="card borderd">
-  <p class="state semiBold-text hight-text">Estado: Estado do usuário</p>
-  <p class="age semiBold-text hight-text">Idade: Idade do usuário</p>
+  <div class="card-content">
+    <h4 class="title hight-text">Personal Info</h4>
+    <p class="card-text state semiBold-text hight-text">
+      State:
+      <span class="regular-text">{{ user.location.state }}</span>
+    </p>
+    <p class="card-text age semiBold-text hight-text">
+      Age:
+      <span class="regular-text">{{ user.dob.age }}</span>
+    </p>
+    <div class="accordion-content" *ngIf="accordionStatus">
+      <p class="card-text age semiBold-text hight-text">
+        Gender:
+        <span class="regular-text">{{ user.gender }}</span>
+      </p>
+      <p class="card-text age semiBold-text hight-text">
+        Birthday:
+        <span class="regular-text">{{ user.dob.date | date: 'mediumDate' }}</span>
+      </p>
+    </div>
+  </div>
+  <div class="accordion">
+    <div class="accordion-header" (click)="onAccordion($event)">
+      <button class="accordion-button medium-text regular-text">
+        <img src="assets/icons/arrow-down_Icon.svg" alt="" />
+        {{ accordionStatus ? 'Show Less' : 'Show More' }}
+      </button>
+    </div>
+  </div>
 </div>
