@@ -1,7 +1,7 @@
 <div>
   <p class="regular-text medium-text">users_like.me</p>
-  <button class="regular-text medium-text borderd" (click)="onPeopleFollowedCard($event)" *ngIf="peopleFollowed > 0">
-    Seguindo {{ peopleFollowed }} pessoas
+  <button class="regular-text medium-text borderd" (click)="onPeopleFollowedCard($event)" *ngIf="peopleFollowed.length > 0">
+    Seguindo {{ peopleFollowed.length }} pessoas
     <img src="assets/icons/arrow-down_Icon.svg"/>
   </button>
   <bit-people-followed-card class="card" *ngIf="peopleFollowedCardOpened"></bit-people-followed-card>

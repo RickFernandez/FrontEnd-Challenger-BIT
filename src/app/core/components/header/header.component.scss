@@ -3,7 +3,7 @@
 div {
   width: 100%;
   height: 80px;
-  padding: 20px 100px;
+  padding: 20px 15%;
   color: $white;
   background-color: $purple;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -13,7 +13,6 @@ div {
   position: relative;
 
   button {
-    width: 170px;
     height: 40px;
     padding: 10px;
     border-radius: 5px;
@@ -27,10 +26,12 @@ div {
   }
 
   button.opened {
-    z-index: 2;
+    z-index: 3;
     color: $purple;
-    background-color: transparent;
+    background-color: $white;
     border: none;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
     
      img {
       transform: rotate(180deg);
@@ -45,7 +46,8 @@ div {
 
   .card {
     position: absolute;
-    right: 100px;
-    top: 24%;
+    z-index: 2;
+    right: 15%;
+    top: 70%;
   }
 }
