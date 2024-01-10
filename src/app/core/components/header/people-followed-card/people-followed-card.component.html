@@ -1,13 +1,23 @@
 <div class="borderd">
-  <p>people-followed-card works!</p>
-  <p>people-followed-card works!</p>
-  <p>people-followed-card works!</p>
-  <p>people-followed-card works!</p>
-  <p>people-followed-card works!</p>
-  <p>people-followed-card works!</p>
-  <p>people-followed-card works!</p>
-  <p>people-followed-card works!</p>
-  <p>people-followed-card works!</p>
-  <p>people-followed-card works!</p>
-  <p>people-followed-card works!</p>
+  <div class="user-data" *ngFor="let user of peopleFollowed">
+    <div class="user-infos">
+      <img class="user-img" src="{{ user.picture.large }}" alt="">
+      <div class="user-infos-txt">
+        <p class="user-infos-txt-name medium-text bold-text">
+          {{ user.name.first }} {{ user.name.last }}
+        </p>
+        <span class="user-infos-txt-location regular-text medium-text">
+          {{ user.location.city }},
+          {{ user.location.country }}
+        </span>
+      </div>
+    </div>
+    <button
+      type="button"
+      class="unfollow hight-text medium-text regular-text"
+      (click)="onUnfollow(user)"
+    >
+      Unfollow
+    </button>
+  </div>
 </div>
