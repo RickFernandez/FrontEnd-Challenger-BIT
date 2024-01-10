@@ -1,0 +1,43 @@
+@import '../../../../shared/style/variables';
+
+.card {
+  width: 100%;
+  min-width: 300px;
+
+  .card-content {
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+
+    .title {
+      margin-bottom: 15px;
+    }
+
+    .accordion-content {
+      display: flex;
+      gap: 10px;
+      flex-direction: column;
+    }
+  }
+
+  .accordion > .accordion-header > .accordion-button {
+    width: 100%;
+    color: $cian;
+    padding: 15px 20px;
+    border: none;
+    border-top: 1px solid $dark-gray;
+    background-color: transparent;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  }
+
+  .accordion > .accordion-header > .accordion-button.opened > img {
+    transform: rotate(180deg);
+  }
+
+  .accordion > .accordion-header > .accordion-button:hover {
+    cursor: pointer;
+  }
+}
