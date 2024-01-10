@@ -5,8 +5,6 @@ import { PersonalInfoCardComponent } from './personal-info-card/personal-info-ca
 import { ContactInfoCardComponent } from './contact-info-card/contact-info-card.component';
 import { SugestionCardComponent } from './sugestion-card/sugestion-card.component';
 
-
-
 @NgModule({
   declarations: [
     ProfileCardComponent,
