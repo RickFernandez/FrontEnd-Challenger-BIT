@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, map } from 'rxjs';
+import { BehaviorSubject, EMPTY, Observable, catchError, map } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { UserRes } from '../model/UserRes';
 import { HttpClient } from '@angular/common/http';
@@ -97,11 +97,14 @@ export class UserService {
             this.user.nat = result.nat,
             this.user.following = false,
             this.user.id = result.login.uuid
+            this.getPersonalInfo(this.user.gender, this.user.location.state, this.user.dob.date, this.user.dob.age);
+            this.updateSearchedUsers(this.user);        
         }
-        this.getPersonalInfo(this.user.gender, this.user.location.state, this.user.dob.date, this.user.dob.age);
-        this.updateSearchedUsers(this.user);        
         return this.user;
-      })
+      }),
+      catchError(e =>
+        this.errorHandler(e)
+      )
     )
   }
 
@@ -199,5 +202,14 @@ export class UserService {
 
   updatePeopleSuggestioned(): void {
     this.peopleSuggestioned.next(this.searchedUsers);
+  }
+
+  errorHandler(e: any): Observable<any> {
+    console.log(e);
+    alert(`
+          Oops... An error occurred while trying to find users. Please try again. =(
+          If the error persists, try again later.
+        `);
+    return EMPTY;
   }
 }
