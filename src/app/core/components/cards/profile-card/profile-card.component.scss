@@ -94,3 +94,25 @@
     }
   }
 }
+
+
+@media screen and (max-width: 426px) {
+  .profile-card > .profile-infos {
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+    }
+
+    .buttons {
+      margin-block: 30px 20px;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      flex-direction: column;
+
+      button {
+        margin: 0;
+      }
+    }
+  }
+}

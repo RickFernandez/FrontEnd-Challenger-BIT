@@ -85,3 +85,17 @@ section {
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  section > .content {
+    .row {
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .suggestions > .row {
+      flex-wrap: nowrap;
+    }
+  }
+}
