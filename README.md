@@ -40,8 +40,10 @@ Link da [API](https://randomuser.me/api/).
 
 https://github.com/RickFernandez/FrontEnd-Challenger-BIT/assets/89798238/2f8b0306-37ff-4921-84e0-92a48352f8c2
 
+- Responsividade:
 
-#### Próximos passos para a conclusão do projeto:
+https://github.com/RickFernandez/FrontEnd-Challenger-BIT/assets/89798238/910ebb42-bbae-4fb3-96fd-83f6cc97919a
 
-- Desenvolver a responsividade;
-- Desenvolver uma solução para o caso da API demorar para responder ou ficar fora do ar;
+- Mensagem de erro caso a chamada a API falhe:
+
+https://github.com/RickFernandez/FrontEnd-Challenger-BIT/assets/89798238/44e5058f-4e7d-4713-b115-e32a95487674
