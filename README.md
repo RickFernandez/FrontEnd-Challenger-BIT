@@ -33,3 +33,15 @@ Recomendações:
 Link da [API](https://randomuser.me/api/).
 
 *a Api pode demorar pra responder ou ficar fora do ar em alguns momentos (pense nisso quando for desenvolver).
+
+<hr>
+
+### Projeto realizado até o momento:
+
+https://github.com/RickFernandez/FrontEnd-Challenger-BIT/assets/89798238/2f8b0306-37ff-4921-84e0-92a48352f8c2
+
+
+#### Próximos passos para a conclusão do projeto:
+
+- Desenvolver a responsividade;
+- Desenvolver uma solução para o caso da API demorar para responder ou ficar fora do ar;
